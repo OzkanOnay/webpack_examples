@@ -1,4 +1,6 @@
-require('./login.es6');
+import {login} from './login';
+
+login();
 
 document.querySelector('#text').innerHTML = 'Some text......';
 demo('hello');

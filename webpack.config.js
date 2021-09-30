@@ -2,7 +2,7 @@ var path = require('path');
 
 module.exports = {
     context: path.resolve('src'),
-    entry: ['./utils.js','./app.js'],
+    entry: ['./utils','./app'],
     output: { 
         path:path.resolve('build/js'),
         publicPath: path.resolve('/public/assets/js/'),
@@ -13,7 +13,6 @@ module.exports = {
 
     devServer: {
         static: {
-            directory: path.join(__dirname, 'assets'),
             publicPath: '/',
         },
     },
