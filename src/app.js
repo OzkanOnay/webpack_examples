@@ -1,7 +1,6 @@
 require('./login.es6');
 
-document.write('hello');
-document.write('world !!!');
+document.querySelector('#text').innerHTML = 'Some text......';
 demo('hello');
 
 function demo(string) {

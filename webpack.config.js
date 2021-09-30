@@ -1,8 +1,22 @@
+var path = require('path');
+
 module.exports = {
-    entry: ['./src/utils.js','./src/app.js'],
-    output: { filename: 'bundle.js' },
+    context: path.resolve('src'),
+    entry: ['./utils.js','./app.js'],
+    output: { 
+        path:path.resolve('build/js'),
+        publicPath: path.resolve('/public/assets/js/'),
+        filename: 'bundle.js' 
+    },
     watch: true,
     mode:'development',
+
+    devServer: {
+        static: {
+            directory: path.join(__dirname, 'assets'),
+            publicPath: '/',
+        },
+    },
 
     module:{
         rules: [
